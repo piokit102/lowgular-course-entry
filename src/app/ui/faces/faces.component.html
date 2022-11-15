@@ -10,8 +10,8 @@
   }
 </style>
 
-<div *ngFor="let employee of data$ | async as data">
-  <img [src]="employee.image">
+<div *ngFor="let employee of data$ | async">
+  <img [src]="employee.img">
   <br>
   {{employee.name}}
 </div>
