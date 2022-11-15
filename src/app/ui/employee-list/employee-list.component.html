@@ -1,6 +1,26 @@
-<h1>Employee list</h1>
-<ul *ngIf="data$ | async as data; else empty">
-  <li *ngFor="let employee of data">{{ employee.id }}: {{ employee.name }}</li>
-</ul>
+<style>
+  h1 {
+    color: red;
+    font-size: 51px;
+  }
+  #div1{
+    background-color: aqua;
+    height: 200px;
+    width: 350px;
+  }
+  #div2 {
+    background-color: darkgreen;
+    height: 70px;
+    width: 350px;
+  }
+</style>
 
-<ng-template #empty> There is no data </ng-template>
+<div id="div1">
+  <div id="div2">
+    <h1>Employee list</h1></div>
+  <ul *ngIf="data$ | async as data; else empty">
+    <li *ngFor="let employee of data">{{ employee.id }}: {{ employee.name }}: {{ employee.email }}</li>
+  </ul>
+
+  <ng-template #empty> There is no data </ng-template>
+</div>
