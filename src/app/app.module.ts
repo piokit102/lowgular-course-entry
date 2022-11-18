@@ -7,6 +7,9 @@ import { EmployeeListComponentModule } from "./ui/employee-list/employee-list.co
 import {FacesComponentModule} from "./ui/faces/faces.component-module";
 import {EmployeeService} from "./services/employee.service";
 import {EmployeeServiceModule} from "./services/employee.service-module";
+import {ProjectListComponentModule} from "./ui/project-list/project-list.component-module";
+import {EmployeFormComponentModule} from "./ui/employe-form/employe-form.component-module";
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +20,8 @@ import {EmployeeServiceModule} from "./services/employee.service-module";
         EmployeeListComponentModule,
         FacesComponentModule,
         EmployeeServiceModule,
+        ProjectListComponentModule,
+        EmployeFormComponentModule,
     ],
   providers: [],
   bootstrap: [AppComponent],

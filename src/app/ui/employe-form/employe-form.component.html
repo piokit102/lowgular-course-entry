@@ -1,0 +1,8 @@
+<form [formGroup]="eForm" (ngSubmit)="onFormSumbmitted(eForm.value)">
+  <input type="text" formControlName="name" placeholder="Name">
+  <input type="number" formControlName="age" placeholder="Age">
+  <input type="number" formControlName="salary" placeholder="Salary">
+  <input type="submit" [disabled]="eForm.invalid" value="Submit">
+</form>
+
+<div [hidden]="eForm.invalid">Your new employee: {{eForm.value.name}}, age: {{eForm.value.age}} with salary {{eForm.value.salary}} $ will be added to the system </div>
